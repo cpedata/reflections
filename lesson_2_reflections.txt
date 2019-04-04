@@ -1,12 +1,18 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-You create a new Git repository for tracking file status and changes in the current directory.
+You create a new Git repository for tracking file status and changes in your project.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
+The staging area contains the files, present in the working directory, marked to be committed. 
+Without it, you should always commit one file at a time. From the staging area you can do a single commit to the repository, 
+with all the files representing a logical change to the project.
+
 How can you use the staging area to make sure you have one commit per logical
 change?
+
+You can use the "git add" function to move files to the staging area.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
