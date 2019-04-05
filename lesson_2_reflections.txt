@@ -12,15 +12,31 @@ with all the files representing a logical change to the project.
 How can you use the staging area to make sure you have one commit per logical
 change?
 
-You can use the "git add" function to move files to the staging area.
+You can use the "git add" function to move files to the staging area. 
+Before commit, you can check differences between working dir and staging area with "git diff" command, 
+or differences between staging area and last commit with "git diff --staged" command.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+Creating new branches can be useful to test new functions without affecting the main (master) branch.
+
 How do the diagrams help you visualize the branch structure?
+
+With diagrams you can easily build the commit graph for the project, 
+checking out which paths (commits ids) are reachable or not. 
+You can visualize the detached heads and eventually create a new branch for them.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+Merging links together the two branches (putting together modifications), 
+so all their commits will be reachable from the new merged branch, 
+ordered by timestamp in log. Main branch is the currently checkouted branch, 
+and you can delete the other merged branch (deleting only its label).
+
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+Automatic merging avoid handling all the files comparison manually, 
+needed only when a row is modified in both branches we are merging.
